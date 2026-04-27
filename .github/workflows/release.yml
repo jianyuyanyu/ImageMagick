@@ -611,7 +611,7 @@ jobs:
             ${{github.workspace}}/artifacts/*.msixbundle
             ${{github.workspace}}/artifacts/*.AppImage
 
-      - name: Save provenance as multiple.intoto.jsonl
+      - name: Save provenance as an artifact
         env:
           BUNDLE_PATH: ${{steps.attest.outputs.bundle-path}}
           VERSION: ${{needs.version.outputs.version}}
